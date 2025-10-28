@@ -1,0 +1,15 @@
+# Robots.txt for Vinod Patidar's Portfolio
+# Allow all web crawlers to access the site
+
+User-agent: *
+Allow: /
+
+# Block access to Next.js internal paths
+Disallow: /_next/
+Disallow: /api/
+
+# Block access to source maps and other development files
+Disallow: *.map$
+
+# Sitemap location
+Sitemap: https://thevinodpatidar.com/sitemap.xml

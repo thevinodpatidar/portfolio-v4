@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { StructuredData } from "@/components/structured-data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,9 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "vinod patidar - software engineer & entrepreneur",
+  title: {
+    default: "Vinod Patidar - Software Engineer & Entrepreneur",
+    template: "%s | Vinod Patidar",
+  },
   description:
-    "portfolio of vinod patidar, a passionate software engineer and entrepreneur sharing his journey through code and innovation. specializing in full-stack development, AI integration, and startup building.",
+    "Portfolio of Vinod Patidar, a passionate software engineer and entrepreneur sharing his journey through code and innovation. Specializing in full-stack development, AI integration, and startup building.",
   keywords: [
     "vinod patidar",
     "software engineer",
@@ -27,35 +31,70 @@ export const metadata: Metadata = {
     "ai",
     "startup",
     "portfolio",
+    "startuplist.ing",
+    "joyform.in",
+    "graftek.in",
+    "vaanix.ai",
+    "founder",
+    "web development",
+    "software development",
+    "tech entrepreneur",
   ],
   authors: [{ name: "Vinod Patidar" }],
   creator: "Vinod Patidar",
+  publisher: "Vinod Patidar",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_NEXT_APP_URL as string),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "vinod patidar - software engineer & entrepreneur",
+    title: "Vinod Patidar - Software Engineer & Entrepreneur",
     description:
-      "passionate software engineer and entrepreneur sharing his journey through code and innovation",
-    url: "https://vinodpatidar.com",
+      "Passionate software engineer and entrepreneur sharing his journey through code and innovation. Specializing in full-stack development, AI integration, and startup building.",
+    url: process.env.NEXT_PUBLIC_NEXT_APP_URL,
     siteName: "Vinod Patidar Portfolio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vinod Patidar - Software Engineer & Entrepreneur",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "vinod patidar - software engineer & entrepreneur",
+    title: "Vinod Patidar - Software Engineer & Entrepreneur",
     description:
-      "passionate software engineer and entrepreneur sharing his journey through code and innovation",
+      "Passionate software engineer and entrepreneur sharing his journey through code and innovation. Specializing in full-stack development, AI integration, and startup building.",
     creator: "@thevinodpatidar",
+    images: ["/api/og"],
   },
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  category: "portfolio",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
   },
 };
 
@@ -69,6 +108,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StructuredData />
         {children}
       </body>
     </html>
