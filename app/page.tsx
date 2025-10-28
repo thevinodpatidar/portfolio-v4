@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { useState, useEffect } from "react";
 import vinodImage from "@/public/vinod-patidar.jpg";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
