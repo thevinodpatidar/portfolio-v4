@@ -153,7 +153,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-20"
+        className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-24"
       >
         <div className="text-center space-y-8 max-w-4xl">
           <div className="space-y-4 flex flex-col items-center justify-center">
@@ -343,170 +343,170 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="animate-on-scroll">
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Technical Skills */}
-              <div className="space-y-6">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
-                    <span className="text-2xl">⚡</span>
-                  </div>
-                  <h3 className="text-xl font-semibold lowercase tracking-wide">
-                    technical skills
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  {[
-                    {
-                      name: "javascript/typescript",
-                      level: "expert",
-                      years: "5+",
-                    },
-                    { name: "react/next.js", level: "expert", years: "4+" },
-                    { name: "node.js/python", level: "advanced", years: "4+" },
-                    { name: "database design", level: "advanced", years: "4+" },
-                    {
-                      name: "cloud architecture",
-                      level: "intermediate",
-                      years: "3+",
-                    },
-                    { name: "api development", level: "expert", years: "5+" },
-                  ].map((skill, index) => (
-                    <div
-                      key={skill.name}
-                      className="group p-5 rounded-xl border border-border/50 transition-all duration-300 cursor-pointer"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="font-semibold lowercase text-lg">
-                          {skill.name}
-                        </span>
-                        <div className="flex items-center space-x-2">
-                          <span
-                            className={`px-3 py-1 rounded-full text-xs font-medium ${
-                              skill.level === "expert"
-                                ? "bg-primary text-primary-foreground"
-                                : skill.level === "advanced"
-                                ? "bg-primary/80 text-primary-foreground"
-                                : "bg-muted text-muted-foreground"
-                            }`}
-                          >
-                            {skill.level}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-muted-foreground">
-                          {skill.years} years experience
-                        </span>
-                        <div className="flex space-x-1">
-                          {[
-                            ...Array(
-                              skill.level === "expert"
-                                ? 5
-                                : skill.level === "advanced"
-                                ? 4
-                                : 3
-                            ),
-                          ].map((_, i) => (
-                            <div
-                              key={i}
-                              className="w-2 h-2 bg-primary rounded-full"
-                              style={{
-                                animationDelay: `${index * 100 + i * 50}ms`,
-                              }}
-                            ></div>
-                          ))}
-                        </div>
-                      </div>
+          <div className="animate-on-scroll space-y-12">
+            {/* Frontend Development */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-medium lowercase text-primary border-b border-border/50 pb-2">
+                frontend development
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  {
+                    name: "javascript/typescript",
+                    level: 95,
+                    description:
+                      "building scalable web applications with modern js/ts",
+                  },
+                  {
+                    name: "react/next.js",
+                    level: 90,
+                    description:
+                      "creating interactive user interfaces and full-stack apps",
+                  },
+                ].map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="bg-background/50 p-6 rounded-lg border border-border/50"
+                  >
+                    <div>
+                      <h4 className="font-semibold lowercase text-lg mb-1">
+                        {skill.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground lowercase">
+                        {skill.description}
+                      </p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
+            </div>
 
-              {/* Design & Product Skills */}
-              <div className="space-y-6">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
-                    <span className="text-2xl">🎨</span>
-                  </div>
-                  <h3 className="text-xl font-semibold lowercase tracking-wide">
-                    design & product
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  {[
-                    {
-                      name: "user experience design",
-                      level: "advanced",
-                      years: "4+",
-                    },
-                    {
-                      name: "product strategy",
-                      level: "advanced",
-                      years: "4+",
-                    },
-                    {
-                      name: "agile methodologies",
-                      level: "expert",
-                      years: "5+",
-                    },
-                    { name: "team leadership", level: "advanced", years: "3+" },
-                  ].map((skill, index) => (
-                    <div
-                      key={skill.name}
-                      className="group p-5 rounded-xl border border-border/50 transition-all duration-300 cursor-pointer"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="font-semibold lowercase text-lg">
-                          {skill.name}
-                        </span>
-                        <div className="flex items-center space-x-2">
-                          <span
-                            className={`px-3 py-1 rounded-full text-xs font-medium ${
-                              skill.level === "expert"
-                                ? "bg-primary text-primary-foreground"
-                                : skill.level === "advanced"
-                                ? "bg-primary/80 text-primary-foreground"
-                                : "bg-muted text-muted-foreground"
-                            }`}
-                          >
-                            {skill.level}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-muted-foreground">
-                          {skill.years} years experience
-                        </span>
-                        <div className="flex space-x-1">
-                          {[
-                            ...Array(
-                              skill.level === "expert"
-                                ? 5
-                                : skill.level === "advanced"
-                                ? 4
-                                : 3
-                            ),
-                          ].map((_, i) => (
-                            <div
-                              key={i}
-                              className="w-2 h-2 bg-primary rounded-full"
-                              style={{
-                                animationDelay: `${index * 100 + i * 50}ms`,
-                              }}
-                            ></div>
-                          ))}
-                        </div>
-                      </div>
+            {/* Backend Development */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-medium lowercase text-primary border-b border-border/50 pb-2">
+                backend development
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    name: "node.js",
+                    level: 85,
+                    description: "server-side applications and api development",
+                  },
+                  {
+                    name: "python",
+                    level: 80,
+                    description: "data processing and automation scripts",
+                  },
+                  {
+                    name: "database design",
+                    level: 85,
+                    description: "sql & nosql database architecture",
+                  },
+                  {
+                    name: "api development",
+                    level: 90,
+                    description: "restful & graphql api design",
+                  },
+                  {
+                    name: "cloud architecture",
+                    level: 75,
+                    description: "aws/azure deployment and scaling",
+                  },
+                ].map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="bg-background/50 p-6 rounded-lg border border-border/50"
+                  >
+                    <div>
+                      <h4 className="font-semibold lowercase text-lg mb-1">
+                        {skill.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground lowercase">
+                        {skill.description}
+                      </p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Design & Strategy */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-medium lowercase text-primary border-b border-border/50 pb-2">
+                design & strategy
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  {
+                    name: "ux/ui design",
+                    level: 85,
+                    description: "user-centered design and prototyping",
+                  },
+                  {
+                    name: "product strategy",
+                    level: 80,
+                    description: "roadmapping and feature prioritization",
+                  },
+                  {
+                    name: "agile methodologies",
+                    level: 90,
+                    description: "scrum & kanban implementation",
+                  },
+                  {
+                    name: "team leadership",
+                    level: 75,
+                    description: "mentoring and cross-functional collaboration",
+                  },
+                ].map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="bg-background/50 p-6 rounded-lg border border-border/50"
+                  >
+                    <div>
+                      <h4 className="font-semibold lowercase text-lg mb-1">
+                        {skill.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground lowercase">
+                        {skill.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & Technologies */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-medium lowercase text-primary border-b border-border/50 pb-2">
+                tools & technologies
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "git",
+                  "docker",
+                  "kubernetes",
+                  "aws",
+                  "vercel",
+                  "figma",
+                  "notion",
+                  "slack",
+                  "postman",
+                  "mongodb",
+                  "postgresql",
+                  "redis",
+                  "graphql",
+                  "tailwind css",
+                  "framer motion",
+                ].map((tool, index) => (
+                  <span
+                    key={tool}
+                    className="px-4 py-2 bg-background rounded-full text-sm lowercase border border-border/50"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    {tool}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -703,7 +703,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-6 text-center">
         <p className="text-muted-foreground lowercase">
-          crafted with ❤️ by vinod patidar
+          crafted with ❤️ by vinod patidar & ai
         </p>
       </footer>
     </div>
