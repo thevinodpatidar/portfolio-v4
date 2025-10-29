@@ -1,6 +1,6 @@
+import { StructuredData } from "@/components/structured-data";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { StructuredData } from "@/components/structured-data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -105,6 +105,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          async
+          src="https://umami.mailgenai.com/script.js"
+          data-website-id="d6174fe1-794f-4817-9287-d6e883c137ce"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
