@@ -13,6 +13,38 @@ export default function WorkSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-on-scroll">
           <a
+            href="https://startuplist.ing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-muted p-8 rounded-lg space-y-4 lowercase cursor-pointer group block hover:shadow-lg transition-shadow duration-300"
+          >
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
+                startup listing
+              </h3>
+              <span className="text-sm text-muted-foreground">2024</span>
+            </div>
+            <p className="text-muted-foreground">
+              a curated platform that showcases the best startups, saas tools,
+              and products. serves as a discovery hub for innovative solutions
+              built by indie hackers and teams with exclusive deals.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
+                next.js
+              </span>
+              <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
+                react
+              </span>
+              <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
+                typescript
+              </span>
+              <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
+                postgresql
+              </span>
+            </div>
+          </a>
+          <a
             href="https://joyform.in"
             target="_blank"
             rel="noopener noreferrer"
@@ -42,39 +74,6 @@ export default function WorkSection() {
               </span>
               <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
                 tailwind css
-              </span>
-            </div>
-          </a>
-
-          <a
-            href="https://startuplist.ing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-muted p-8 rounded-lg space-y-4 lowercase cursor-pointer group block hover:shadow-lg transition-shadow duration-300"
-          >
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
-                startup listing
-              </h3>
-              <span className="text-sm text-muted-foreground">2024</span>
-            </div>
-            <p className="text-muted-foreground">
-              a curated platform that showcases the best startups, saas tools,
-              and products. serves as a discovery hub for innovative solutions
-              built by indie hackers and teams with exclusive deals.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
-                next.js
-              </span>
-              <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
-                react
-              </span>
-              <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
-                typescript
-              </span>
-              <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
-                postgresql
               </span>
             </div>
           </a>
@@ -125,10 +124,10 @@ export default function WorkSection() {
               <span className="text-sm text-muted-foreground">2024</span>
             </div>
             <p className="text-muted-foreground">
-              a platform dedicated to ai voice agents, allowing users to
-              search, share, and explore the best ai voice agents along with
-              their system prompts and settings. supports multiple platforms
-              like vapi and retell.
+              a platform dedicated to ai voice agents, allowing users to search,
+              share, and explore the best ai voice agents along with their
+              system prompts and settings. supports multiple platforms like vapi
+              and retell.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
@@ -191,8 +190,8 @@ export default function WorkSection() {
             </div>
             <p className="text-muted-foreground">
               a storytelling portfolio built with next.js, featuring smooth
-              animations, interactive elements, and responsive design. the
-              very site you&apos;re on right now.
+              animations, interactive elements, and responsive design. the very
+              site you&apos;re on right now.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 bg-background rounded-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors">

@@ -31,8 +31,7 @@ export default function JourneySection() {
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h3 className="text-3xl font-medium lowercase">the evolution</h3>
             <p className="text-lg leading-relaxed lowercase text-muted-foreground">
-              during the pandemic, i took the plunge into entrepreneurship.
-              building my first startup taught me more about product
+              during the pandemic, i took the plunge into deeper concept of software development. building my first startup taught me more about product
               development, user experience, and the realities of bringing
               ideas to life than any course ever could.
             </p>
