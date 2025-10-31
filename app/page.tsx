@@ -9,6 +9,7 @@ const HeroSection = lazy(() => import("@/components/hero-section"));
 const JourneySection = lazy(() => import("@/components/journey-section"));
 const SkillsSection = lazy(() => import("@/components/skills-section"));
 const WorkSection = lazy(() => import("@/components/work-section"));
+const BlogSection = lazy(() => import("@/components/blog-section"));
 const ContactSection = lazy(() => import("@/components/contact-section"));
 const Footer = lazy(() => import("@/components/footer"));
 
@@ -146,7 +147,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "journey", "skills", "work", "connect"];
+      const sections = ["home", "journey", "skills", "work", "blog", "connect"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -207,6 +208,7 @@ export default function Home() {
         <JourneySection />
         <SkillsSection />
         <WorkSection />
+        <BlogSection />
         <ContactSection />
         <Footer />
       </Suspense>

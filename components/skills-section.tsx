@@ -1,3 +1,55 @@
+import {
+  SiTypescript,
+  SiReact,
+  SiNodedotjs,
+  SiPython,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiGraphql,
+  SiAmazon,
+  SiGit,
+  SiDocker,
+  SiKubernetes,
+  SiVercel,
+  SiFigma,
+  SiNotion,
+  SiSlack,
+  SiPostman,
+  SiTailwindcss,
+  SiFramer,
+} from "react-icons/si";
+
+const getSkillIcon = (name: string): React.ComponentType<{ className?: string }> => {
+  const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    "javascript/typescript": SiTypescript,
+    "react/next.js": SiReact,
+    "node.js": SiNodedotjs,
+    python: SiPython,
+    "database design": SiPostgresql,
+    "api development": SiGraphql,
+    "cloud architecture": SiAmazon,
+    git: SiGit,
+    docker: SiDocker,
+    kubernetes: SiKubernetes,
+    aws: SiAmazon,
+    vercel: SiVercel,
+    figma: SiFigma,
+    notion: SiNotion,
+    slack: SiSlack,
+    postman: SiPostman,
+    mongodb: SiMongodb,
+    postgresql: SiPostgresql,
+    redis: SiRedis,
+    graphql: SiGraphql,
+    "tailwind css": SiTailwindcss,
+    "framer motion": SiFramer,
+  };
+
+  const normalized = name.toLowerCase();
+  return iconMap[normalized] || SiReact;
+};
+
 export default function SkillsSection() {
   return (
     <section
@@ -34,21 +86,27 @@ export default function SkillsSection() {
                   description:
                     "creating interactive user interfaces and full-stack apps",
                 },
-              ].map((skill) => (
-                <div
-                  key={skill.name}
-                  className="bg-background/50 p-6 rounded-lg border border-border/50"
-                >
-                  <div>
-                    <h4 className="font-semibold lowercase text-lg mb-1">
-                      {skill.name}
-                    </h4>
-                    <p className="text-sm text-muted-foreground lowercase">
-                      {skill.description}
-                    </p>
+              ].map((skill) => {
+                const Icon = getSkillIcon(skill.name);
+                return (
+                  <div
+                    key={skill.name}
+                    className="bg-background/50 p-6 rounded-lg border border-border/50"
+                  >
+                    <div className="flex items-start gap-3">
+                      <Icon className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold lowercase text-lg mb-1">
+                          {skill.name}
+                        </h4>
+                        <p className="text-sm text-muted-foreground lowercase">
+                          {skill.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -84,66 +142,27 @@ export default function SkillsSection() {
                   level: 75,
                   description: "aws/azure deployment and scaling",
                 },
-              ].map((skill) => (
-                <div
-                  key={skill.name}
-                  className="bg-background/50 p-6 rounded-lg border border-border/50"
-                >
-                  <div>
-                    <h4 className="font-semibold lowercase text-lg mb-1">
-                      {skill.name}
-                    </h4>
-                    <p className="text-sm text-muted-foreground lowercase">
-                      {skill.description}
-                    </p>
+              ].map((skill) => {
+                const Icon = getSkillIcon(skill.name);
+                return (
+                  <div
+                    key={skill.name}
+                    className="bg-background/50 p-6 rounded-lg border border-border/50"
+                  >
+                    <div className="flex items-start gap-3">
+                      <Icon className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold lowercase text-lg mb-1">
+                          {skill.name}
+                        </h4>
+                        <p className="text-sm text-muted-foreground lowercase">
+                          {skill.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Design & Strategy */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-medium lowercase text-primary border-b border-border/50 pb-2">
-              design & strategy
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  name: "ux/ui design",
-                  level: 85,
-                  description: "user-centered design and prototyping",
-                },
-                {
-                  name: "product strategy",
-                  level: 80,
-                  description: "roadmapping and feature prioritization",
-                },
-                {
-                  name: "agile methodologies",
-                  level: 90,
-                  description: "scrum & kanban implementation",
-                },
-                {
-                  name: "team leadership",
-                  level: 75,
-                  description: "mentoring and cross-functional collaboration",
-                },
-              ].map((skill) => (
-                <div
-                  key={skill.name}
-                  className="bg-background/50 p-6 rounded-lg border border-border/50"
-                >
-                  <div>
-                    <h4 className="font-semibold lowercase text-lg mb-1">
-                      {skill.name}
-                    </h4>
-                    <p className="text-sm text-muted-foreground lowercase">
-                      {skill.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -169,15 +188,19 @@ export default function SkillsSection() {
                 "graphql",
                 "tailwind css",
                 "framer motion",
-              ].map((tool, index) => (
-                <span
-                  key={tool}
-                  className="px-4 py-2 bg-background rounded-full text-sm lowercase border border-border/50"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  {tool}
-                </span>
-              ))}
+              ].map((tool, index) => {
+                const Icon = getSkillIcon(tool);
+                return (
+                  <span
+                    key={tool}
+                    className="px-4 py-2 bg-background rounded-full text-sm lowercase border border-border/50 flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span>{tool}</span>
+                  </span>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -35,6 +35,7 @@ export default function Navigation({
               { id: "journey", label: "the journey" },
               { id: "skills", label: "what i bring" },
               { id: "work", label: "recent work" },
+              { id: "blog", label: "thoughts" },
               { id: "connect", label: "let's connect" },
             ].map(({ id, label }) => (
               <button
@@ -85,6 +86,7 @@ export default function Navigation({
                 { id: "journey", label: "the journey" },
                 { id: "skills", label: "what i bring" },
                 { id: "work", label: "recent work" },
+                { id: "blog", label: "thoughts" },
                 { id: "connect", label: "let's connect" },
               ].map(({ id, label }) => (
                 <button
