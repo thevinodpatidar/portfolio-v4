@@ -50,7 +50,7 @@ export default function BlogNavigation() {
               href="/#connect"
               className="text-sm lowercase tracking-wide transition-colors hover:text-primary text-muted-foreground"
             >
-              let's connect
+              let&apos;s connect
             </Link>
           </div>
         </div>
