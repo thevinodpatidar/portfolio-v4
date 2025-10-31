@@ -22,7 +22,7 @@ export default function WorkSection() {
               <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
                 startup listing
               </h3>
-              <span className="text-sm text-muted-foreground">2024</span>
+              <span className="text-sm text-muted-foreground">2025</span>
             </div>
             <p className="text-muted-foreground">
               a curated platform that showcases the best startups, saas tools,
@@ -54,7 +54,7 @@ export default function WorkSection() {
               <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
                 joyform
               </h3>
-              <span className="text-sm text-muted-foreground">2024</span>
+              <span className="text-sm text-muted-foreground">2025</span>
             </div>
             <p className="text-muted-foreground">
               an intuitive online form builder designed for modern teams.
@@ -88,7 +88,7 @@ export default function WorkSection() {
               <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
                 graftek
               </h3>
-              <span className="text-sm text-muted-foreground">2024</span>
+              <span className="text-sm text-muted-foreground">2025</span>
             </div>
             <p className="text-muted-foreground">
               build beautiful real estate websites with ease using a powerful
@@ -121,7 +121,7 @@ export default function WorkSection() {
               <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
                 vaanix
               </h3>
-              <span className="text-sm text-muted-foreground">2024</span>
+              <span className="text-sm text-muted-foreground">2025</span>
             </div>
             <p className="text-muted-foreground">
               a platform dedicated to ai voice agents, allowing users to search,
@@ -155,7 +155,7 @@ export default function WorkSection() {
               <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
                 shadcn font picker
               </h3>
-              <span className="text-sm text-muted-foreground">2024</span>
+              <span className="text-sm text-muted-foreground">2025</span>
             </div>
             <p className="text-muted-foreground">
               a react-based font selection component built on shadcn ui&apos;s
@@ -186,7 +186,7 @@ export default function WorkSection() {
               <h3 className="text-xl font-medium group-hover:text-primary transition-colors">
                 portfolio website
               </h3>
-              <span className="text-sm text-muted-foreground">2024</span>
+              <span className="text-sm text-muted-foreground">2025</span>
             </div>
             <p className="text-muted-foreground">
               a storytelling portfolio built with next.js, featuring smooth
