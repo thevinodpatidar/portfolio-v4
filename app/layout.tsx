@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Vinod Patidar",
   },
   description:
-    "Portfolio of Vinod Patidar, a passionate software engineer and entrepreneur sharing his journey through code and innovation. Specializing in full-stack development, AI integration, and startup building.",
+    "a passionate software engineer and entrepreneur sharing his journey through code and innovation. Specializing in full-stack development, AI integration, and startup building.",
   keywords: [
     "vinod patidar",
     "software engineer",
