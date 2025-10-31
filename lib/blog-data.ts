@@ -7,16 +7,6 @@ export interface BlogPost {
   content: string;
 }
 
-// Generate slug from title
-function generateSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-")
-    .trim();
-}
-
 export const blogPosts: BlogPost[] = [
   {
     title: "building in public: lessons from my journey",

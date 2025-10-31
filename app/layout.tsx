@@ -1,5 +1,5 @@
 import { StructuredData } from "@/components/structured-data";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     default: "Vinod Patidar - Software Engineer & Entrepreneur",
     template: "%s | Vinod Patidar",
   },
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_NEXT_APP_URL}/`),
   description:
     "a passionate software engineer and entrepreneur sharing his journey through code and innovation. Specializing in full-stack development, AI integration, and startup building.",
   keywords: [
@@ -48,15 +49,12 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_NEXT_APP_URL as string),
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Vinod Patidar - Software Engineer & Entrepreneur",
     description:
       "Passionate software engineer and entrepreneur sharing his journey through code and innovation. Specializing in full-stack development, AI integration, and startup building.",
-    url: process.env.NEXT_PUBLIC_NEXT_APP_URL,
+    url: "https://thevinodpatidar.com",
     siteName: "Vinod Patidar Portfolio",
     locale: "en_US",
     type: "website",
@@ -75,7 +73,7 @@ export const metadata: Metadata = {
     description:
       "Passionate software engineer and entrepreneur sharing his journey through code and innovation. Specializing in full-stack development, AI integration, and startup building.",
     creator: "@thevinodpatidar",
-    images: ["/api/og"],
+    images: ["/twitter-image.jpg"],
   },
   robots: {
     index: true,
@@ -91,11 +89,12 @@ export const metadata: Metadata = {
     },
   },
   category: "portfolio",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
