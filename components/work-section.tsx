@@ -141,7 +141,7 @@ export default function WorkSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 animate-on-scroll">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {workItems.map((work) => (
             <WorkCard key={work.title} work={work} />
           ))}

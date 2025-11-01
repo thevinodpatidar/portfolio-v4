@@ -17,13 +17,13 @@ export default function BlogSection() {
           </p>
         </div>
 
-        <div className="animate-on-scroll">
+        <div>
           {posts.map((post) => (
             <BlogPostCard key={post.slug} post={post} />
           ))}
         </div>
 
-        <div className="text-center pt-4 animate-on-scroll">
+        <div className="text-center pt-4">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors lowercase text-sm"
