@@ -1,9 +1,6 @@
 export default function JourneySection() {
   return (
-    <section
-      id="journey"
-      className="min-h-screen flex items-center px-6 py-20"
-    >
+    <section id="journey" className="min-h-screen flex items-center px-6 py-20">
       <div className="max-w-4xl mx-auto space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-light lowercase tracking-tight">
@@ -14,16 +11,16 @@ export default function JourneySection() {
           </p>
         </div>
 
-        <div className="space-y-16 animate-on-scroll">
+        <div className="space-y-16">
           {/* The Beginning */}
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h3 className="text-3xl font-medium lowercase">the beginning</h3>
             <p className="text-lg leading-relaxed lowercase text-muted-foreground">
               it all started with a simple question: &ldquo;how do websites
               work?&rdquo; as a curious student, i spent countless nights
-              learning html, css, and javascript. what began as a hobby
-              quickly became an obsession with creating digital experiences
-              that could connect people and solve real problems.
+              learning html, css, and javascript. what began as a hobby quickly
+              became an obsession with creating digital experiences that could
+              connect people and solve real problems.
             </p>
           </div>
 
@@ -31,9 +28,10 @@ export default function JourneySection() {
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h3 className="text-3xl font-medium lowercase">the evolution</h3>
             <p className="text-lg leading-relaxed lowercase text-muted-foreground">
-              during the pandemic, i took the plunge into deeper concept of software development. building my first startup taught me more about product
-              development, user experience, and the realities of bringing
-              ideas to life than any course ever could.
+              during the pandemic, i took the plunge into deeper concept of
+              software development. building my first startup taught me more
+              about product development, user experience, and the realities of
+              bringing ideas to life than any course ever could.
             </p>
           </div>
 
@@ -41,10 +39,9 @@ export default function JourneySection() {
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h3 className="text-3xl font-medium lowercase">the present</h3>
             <p className="text-lg leading-relaxed lowercase text-muted-foreground">
-              today, i focus on the intersection of artificial intelligence
-              and user experience. building scalable systems and creating
-              products that make technology more accessible and
-              human-centered.
+              today, i focus on the intersection of artificial intelligence and
+              user experience. building scalable systems and creating products
+              that make technology more accessible and human-centered.
             </p>
           </div>
         </div>
