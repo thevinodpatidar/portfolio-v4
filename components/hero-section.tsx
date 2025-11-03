@@ -23,7 +23,7 @@ export default function HeroSection({ onScrollToSection }: HeroSectionProps) {
             className="rounded-full size-36 object-cover"
           />
           <h1 className="text-6xl md:text-6xl font-light leading-none tracking-tight">
-            Vinod Patidar
+            vinod patidar
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground lowercase tracking-wide">
             software engineer & entrepreneur
